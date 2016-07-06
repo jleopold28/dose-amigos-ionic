@@ -3,11 +3,8 @@
 </ion-header>
 
 <ion-content padding class="med-list">
-    <div> TEST </div>
-
-    <ion-list>
-	<!--dose-event-slider *ngFor="let doseEvent of doseEvents"
-                           [doseEvent]="doseEvent"></dose-event-slider-->
-    </ion-list>
+    <user-status-card *ngFor="let user of doseAmigosUsers"
+                      [user]="user"
+                      [onClickPage]="userStatusClickPage"></user-status-card>
 </ion-content>
 

@@ -1,40 +1,15 @@
-import {Component} from "@angular/core";
-import {DoseAmigosToolbar} from "../../dose-amigos-toolbar/dose-amigos-toolbar.component";
-import {NavController} from "ionic-angular";
-//import {DoseMedication} from "../../dose-medication/dose-medication";
+import {Component} from '@angular/core';
+import {NavController} from 'ionic-angular';
 
+/*
+  Generated class for the MedListPage page.
 
-@Component(
-    {
-        templateUrl: "build/pages/med-list/med-list.html",
-        directives: [DoseAmigosToolbar]
-    }
-)
-
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+*/
+@Component({
+  templateUrl: 'build/pages/med-list/med-list.html',
+})
 export class MedListPage {
-
-    public title: string = "My Medications";
-    public medList: Array<DoseMedication> = [];
-
-    constructor(
-        private medListService: MedListService
-    ) {
-
-    }
-
-    /**
-     * Initialize the page.
-     * @returns {Promise}
-     */
-    ngOnInit(): any {
-
-        this.userStatusClickPage = FeedPage;
-
-        return this.doseAmigosUserService.list().then(
-            medList => {
-                this.medList = medList;
-            }
-        );
-    }
-
+  constructor(public nav: NavController) {}
 }
